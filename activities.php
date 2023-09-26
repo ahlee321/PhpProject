@@ -1,4 +1,6 @@
-
+<?php
+    $conn = new mysqli('database1.chzwyhfvurav.us-east-1.rds.amazonaws.com', 'admin', 'password', 'database1') or die($conn->error);
+?>
 <div id = "activities" class = "tab-pane fade">
     <img src = "images/calendar.png" class = "pull-left" height = "100" width = "100"/>
     <h2 class = "text-success pull-left">Activities</h2>
