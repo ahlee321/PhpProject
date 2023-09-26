@@ -33,16 +33,18 @@ CREATE TABLE IF NOT EXISTS `activity` (
   `start` varchar(10) NOT NULL,
   `end` varchar(10) NOT NULL,
   `month` varchar(8) NOT NULL,
-  `year` varchar(5) NOT NULL
+  `year` varchar(5) NOT NULL,
+  `companyname` varchar(20) NOT NULL,
+  `imgurl` varchar(999999) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `activity`
 --
 
-INSERT INTO `activity` (`activity_id`, `title`, `description`, `start`, `end`, `month`, `year`) VALUES
-(1, 'accountant', 'must a background on how to use pos like pastel', '040917', '191117', 'Oct', '2017'),
-(2, 'developer ', 'candidate must have background of front end and know at least one framework per language ', '011217', '012318', 'Oct', '2017');
+INSERT INTO `activity` (`activity_id`, `title`, `description`, `start`, `end`, `month`, `year`,`companyname`,`imgurl`) VALUES
+(1, 'accountant', 'must a background on how to use pos like pastel', '040917', '191117', 'Oct', '2017','Intel','https://cdn.vox-cdn.com/thumbor/h-qkmneNK7Ed2YZRFhsSuh5ePjg=/0x0:1100x825/1200x800/filters:focal(462x325:638x501)/cdn.vox-cdn.com/uploads/chorus_image/image/58194473/0011.1367461678.0.jpg'),
+(2, 'developer ', 'candidate must have background of front end and know at least one framework per language ', '011217', '012318', 'Oct', '2017','Everise','https://mma.prnewswire.com/media/952543/Everise_Logo_Logo.jpg?p=facebook');
 
 -- --------------------------------------------------------
 
