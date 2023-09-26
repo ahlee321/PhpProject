@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
-    $dbconn = mysqli_connect('localhost', 'root', '', 'db_issm');
+    $dbconn = new mysqli('database1.chzwyhfvurav.us-east-1.rds.amazonaws.com', 'admin', 'password', 'database1') or die($conn->error);
     session_start();
     $username = $_POST['user_name'];
     $password = $_POST["password"];
