@@ -1,9 +1,9 @@
 <?php
 class DBController {
-	private $host = "localhost";
-	private $user = "root";
-	private $password = "";
-	private $database = "db_issm";
+	private $host = "database1.chzwyhfvurav.us-east-1.rds.amazonaws.com";
+	private $user = "admin";
+	private $password = "password";
+	private $database = "database1";
 	private $conn;
 	
 	function __construct() {
