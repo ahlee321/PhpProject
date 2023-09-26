@@ -12,25 +12,25 @@
 		</ol>
 		<div style = "margin:auto;" class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img src="images/a.jpg" style = "width:1920px; height:500px;" />
+				<img src="https://lcfbucket.s3.amazonaws.com/a.jpg" style = "width:1920px; height:500px;" />
 			</div>
 			<div class="item">
-				<img src="images/b.png" style = "width:1920px; height:500px;"  />
+				<img src="https://lcfbucket.s3.amazonaws.com/b.jpg" style = "width:1920px; height:500px;"  />
 			</div>
 			<div class="item">
-				<img src="images/c.jpg" style = "width:1920px; height:500px;"  />
+				<img src="https://lcfbucket.s3.amazonaws.com/c.jpg" style = "width:1920px; height:500px;"  />
 			</div>
 			<div class="item">
-				<img src="images/h.jpg" style = "width:1920px; height:500px;"  />
+				<img src="https://lcfbucket.s3.amazonaws.com/h.jpg" style = "width:1920px; height:500px;"  />
 			</div>
 			<div class="item">
-				<img src="images/e.jpg" style = "width:1920px; height:500px;"  />
+				<img src="https://lcfbucket.s3.amazonaws.com/e.jpg" style = "width:1920px; height:500px;"  />
 			</div>
 			<div class="item">
-				<img src="images/f.jpg" style = "width:1920px; height:500px;"  />
+				<img src="https://lcfbucket.s3.amazonaws.com/f.jpg" style = "width:1920px; height:500px;"  />
 			</div>
 			<div class="item">
-				<img src="images/g.jpg" style = "width:1920px; height:500px;"  />
+				<img src="https://lcfbucket.s3.amazonaws.com/g.jpg" style = "width:1920px; height:500px;"  />
 			</div>
 		</div>
 		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
