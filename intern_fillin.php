@@ -15,7 +15,7 @@ if (isset($_POST['insert_button'])) {
     $age = $_POST['age'];
 
     // Establish a database connection
-    $con = mysqli_connect("localhost", "root", "", "db_issm");
+    $con = new mysqli('database1.chzwyhfvurav.us-east-1.rds.amazonaws.com', 'admin', 'password', 'database1') or die($conn->error);
 
     // Check if the connection was successful
     if (!$con) {
