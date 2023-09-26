@@ -17,7 +17,7 @@
             <div style="border-style:outset; border-radius: 10px; padding:20px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="https://cdn.vox-cdn.com/thumbor/h-qkmneNK7Ed2YZRFhsSuh5ePjg=/0x0:1100x825/1200x800/filters:focal(462x325:638x501)/cdn.vox-cdn.com/uploads/chorus_image/image/58194473/0011.1367461678.0.jpg" class="img-fluid rounded-start" alt="..." style="width:100%;">
+                        <img src=<?php echo $act_fetch['imgurl'] ?> class="img-fluid rounded-start" alt="..." style="width:100%;">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
