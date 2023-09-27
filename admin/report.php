@@ -14,6 +14,37 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/jquery.dataTables.css" />
 	</head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script type="text/javascript">
+        var chartDom = document.getElementById('main');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Men', 'Female'],
+                title: {
+                    text: 'Gender'
+                }
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [10, 20],
+                    type: 'bar',
+                    title: {
+                        text: 'Total Applicant'
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
 <!--------------------HEAD---------------------->
 <?php include'head.php'?>
 <!--------------------HEAD---------------------->
@@ -21,12 +52,13 @@
 <!-------------------SIDEBAR0------------------>
 <?php include 'sidebar.php'?>
 <!-------------------SIDEBAR0------------------>
-
+		
 		<div id = "sidecontent" class = "well pull-right">
 				<div class = "alert alert-info">students profile</div>
 				
 				<button style = "display:none;" type = "button" id = "cancel_student" class = "btn btn-warning"><span class = "glyphicon glyphicon-hand-right"></span> Cancel</button>
-				<br />
+				<div id="main" style="width: 600px;height:400px;"></div>
+    
 				<br />
 				<div id = "s_table" class = "panel panel-default">
 					<div  class = " panel-heading">	
