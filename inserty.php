@@ -7,7 +7,7 @@ if (!$con)
   die('Could not connect: ' . mysqli_error($con));
   }
  
-mysqli_select_db($con, "db_issm");
+mysqli_select_db($con, "database1");
 $fname = time().'_'.$_FILES['file']['name'];
 $loc = './upload/';
 $move = move_uploaded_file($_FILES['file']['tmp_name'], $loc.$fname);
