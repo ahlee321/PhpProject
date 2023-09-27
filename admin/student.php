@@ -8,10 +8,10 @@
 		<title>Internship portal management system</title>
 		<meta charset = "UTF-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
-		<link rel = "stylesheet" type = "text/css" href = "http://sereneooi-bucket.s3-website-us-east-1.amazonaws.com/css/bootstrap.css" />
-		<link rel = "stylesheet" type = "text/css" href = "http://sereneooi-bucket.s3-website-us-east-1.amazonaws.com/css/style.css" />
-		<link rel = "stylesheet" type = "text/css" href = "http://sereneooi-bucket.s3-website-us-east-1.amazonaws.com/css/jquery-ui.css" />
-		<link rel = "stylesheet" type = "text/css" href = "http://sereneooi-bucket.s3-website-us-east-1.amazonaws.com/css/jquery.dataTables.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/jquery-ui.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/jquery.dataTables.css" />
 	</head>
 <body>
 <!--------------------HEAD---------------------->
@@ -23,8 +23,8 @@
 <!-------------------SIDEBAR0------------------>
 
 		<div id = "sidecontent" class = "well pull-right">
-				<div class = "alert alert-info">Students Profile</div>
-				<button type="button" id="generate_report" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Generate Report</button>
+				<div class = "alert alert-info">students profile</div>
+				
 				<button style = "display:none;" type = "button" id = "cancel_student" class = "btn btn-warning"><span class = "glyphicon glyphicon-hand-right"></span> Cancel</button>
 				<br />
 				<br />
@@ -44,7 +44,7 @@
 							</thead>
 							<tbody>
 								<?php
-									$s_query = $conn->query("SELECT * FROM `fill_details`") or die($conn->error);
+									$s_query = $conn->query("SELECT * FROM `fill_details`") or die(mysqli_error());
 									while($s_fetch = $s_query->fetch_array()){	
 								?>
 								<tr>
@@ -125,25 +125,6 @@
 				window.location = 'delete_student.php?id=' + $id;
 			});
 		});
-
-		// Handle click event for the "Generate Report" button
-	        $('#generate_report').on('click', function() {
-	            // Perform actions to generate the report
-	            $.ajax({
-	                url: 'applied_report.php', // Replace with the actual URL of your report generation script
-	                method: 'POST',
-	                dataType: 'html', // Change to the appropriate data type
-	                success: function(response) {
-	                    // Handle the response, e.g., display the report or initiate download
-	                    alert('Report generated successfully.');
-				window.location = 'applied_report.php';
-	                },
-	                error: function(xhr, status, error) {
-	                    // Handle any errors
-	                    alert('Error generating the report: ' + error);
-	                }
-	            });
-        	});
 	});
 </script>
 </html>
