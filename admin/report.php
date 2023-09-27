@@ -39,7 +39,6 @@
 									<th>Email</th>
 									<th>Gender</th>
 									<th>CV</th>
-									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
