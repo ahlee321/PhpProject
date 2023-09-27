@@ -18,6 +18,7 @@
 				
 			</ul>
 		</li>
+		<li><a href = "report.php"><i class = "glyphicon glyphicon-home"></i> Report</a></li>
 		<li><a href = "activity.php"><i class = "glyphicon glyphicon-calendar"></i>Upload internships</a></li>
 		
 		<li><a href = "student.php"><i class = "glyphicon glyphicon-ruble"></i> students partculars</a></li>
