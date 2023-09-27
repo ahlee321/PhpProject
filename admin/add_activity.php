@@ -8,7 +8,8 @@
 		$month = date("M", strtotime($_POST['start']));
 		$year = date("Y", strtotime($_POST['start']));
                 $compname = $_POST['compname'];
-                $conn->query("INSERT INTO activity VALUES(NULL, '$title', '$description', '$start', '$end', '$month', '$year','$compname')") or die($conn->error);
+		$imgurl = $_POST['imgurl'];
+                $conn->query("INSERT INTO activity VALUES(NULL, '$title', '$description', '$start', '$end', '$month', '$year','$compname','$imgurl')") or die($conn->error);
                 header('location: activity.php');
 	}
 ?>
