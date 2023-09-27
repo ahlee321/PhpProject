@@ -14,37 +14,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/jquery.dataTables.css" />
 	</head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-<script type="text/javascript">
-        var chartDom = document.getElementById('main');
-        var myChart = echarts.init(chartDom);
-        var option;
 
-        option = {
-            xAxis: {
-                type: 'category',
-                data: ['Men', 'Female'],
-                title: {
-                    text: 'Gender'
-                }
-            },
-            yAxis: {
-                type: 'value'
-            },
-            series: [
-                {
-                    data: [10, 20],
-                    type: 'bar',
-                    title: {
-                        text: 'Total Applicant'
-                    }
-                }
-            ]
-        };
-
-        option && myChart.setOption(option);
-
-    </script>
 <!--------------------HEAD---------------------->
 <?php include'head.php'?>
 <!--------------------HEAD---------------------->
@@ -52,7 +22,14 @@
 <!-------------------SIDEBAR0------------------>
 <?php include 'sidebar.php'?>
 <!-------------------SIDEBAR0------------------>
-		
+	<?php
+		$r_query = $conn->query("SELECT (SELECT COUNT(`Id`) FROM `fill_details` WHERE GENDER = 'Female') AS Female, (SELECT COUNT(`Id`) FROM `fill_details` WHERE GENDER = 'Male') AS Male") or die(mysqli_error());
+		if ($r_query) {
+			$row = $r_query->fetch_assoc();
+			$femaleCount = $row['Female'];
+			$maleCount = $row['Male'];
+		}
+		?>	
 		<div id = "sidecontent" class = "well pull-right">
 				<div class = "alert alert-info">students profile</div>
 				
@@ -78,6 +55,7 @@
 									$s_query = $conn->query("SELECT * FROM `fill_details`") or die(mysqli_error());
 									while($s_fetch = $s_query->fetch_array()){	
 								?>
+								
 								<tr>
 									<td><?php echo $s_fetch['company_name']?></td>
 									<td><?php echo $s_fetch['first_name']?></td>
@@ -121,6 +99,37 @@
 		<label class = "navbar-brand ">tremendouschatikobo@gmail.com</label>
 	</nav>
 </body>	
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script type="text/javascript">
+        var chartDom = document.getElementById('main');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Male', 'Female'],
+                title: {
+                    text: 'Gender'
+                }
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [<?php echo $maleCount; ?>, <?php echo $femaleCount; ?>],
+                    type: 'bar',
+                    title: {
+                        text: 'Total Applicant'
+                    }
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
 <script src = "../js/jquery-3.1.1.js"></script>
 <script src = "../js/sidebar.js"></script>
 <script src = "../js/bootstrap.js"></script>
