@@ -11,6 +11,71 @@
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
 		<link rel = "stylesheet" type = "text/css" href = "css/jquery-ui.css" />
 		<link rel = "stylesheet" type = "text/css" href = "css/jquery.dataTables.css" />
+		<style>
+        /* Reset some default styles */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply a background color and set font styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Style the header */
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        /* Style the team member sections */
+        .team-member {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-top: 40px;
+            width: 50%;
+        }
+
+        .profileImage{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .circle {
+            width: 100px;
+            /* Adjust the width and height as needed */
+            height: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .circle img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Style the footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
 	</head>
 <body>
 <!--------------------HEAD---------------------->
